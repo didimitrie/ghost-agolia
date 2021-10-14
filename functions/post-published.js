@@ -15,7 +15,7 @@ exports.handler = async (event) => {
         index: process.env.ALGOLIA_INDEX
     };
 
-    console.log(event.body)
+    // console.log(event.body)
     
     let {post} = JSON.parse(event.body);
     post = (post && Object.keys(post.current).length > 0 && post.current) || {};
@@ -29,8 +29,13 @@ exports.handler = async (event) => {
 
     const node = [];
 
+    // HACK: Gets away around posts with no tags.
+    post.tags = post.tags || []
+    post.authors = post.authors || []
+
     // Transformer methods need an Array of Objects
     node.push(post);
+
 
     // Transform into Algolia object with the properties we need
     const algoliaObject = transforms.transformToAlgoliaObject(node);
