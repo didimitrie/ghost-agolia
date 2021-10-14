@@ -1,0 +1,25 @@
+{
+  "name": "ghost-agolia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didimitrie/ghost-agolia.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didimitrie/ghost-agolia/issues"
+  },
+  "homepage": "https://github.com/didimitrie/ghost-agolia#readme",
+  "dependencies": {
+    "@tryghost/algolia-fragmenter": "^0.2.2",
+    "@tryghost/algolia-indexer": "^0.1.7",
+    "netlify-lambda": "^2.0.14"
+  }
+}
